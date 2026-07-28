@@ -19,7 +19,6 @@ corners = cv2.cornerHarris(gray_float, 5, 3, 0.04 )
 corners = cv2.dilate(corners, None)
 
 img_corners = img.copy()
-print(corners.max())
 img_corners[corners > 0.1 * corners.max()] = [0, 0, 255]
 
 cv2.imshow("corners.png", img_corners)
