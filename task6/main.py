@@ -14,4 +14,3 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 cv2.imwrite("thresholded_leaf.png", thresholded)
-
