@@ -1,0 +1,34 @@
+CNN (Convolutional Neural Network) Nedir?
+
+CNN, özellikle görüntü işleme ve bilgisayarlı görü alanında kullanılan bir derin öğrenme mimarisidir.
+Temel çalışma prensibi, küçük filtrelerin (kernel) görüntü üzerinde gezdirilerek özellik haritaları (feature map) çıkarılmasına dayanır.
+Bu, klasik görüntü işlemede kullanılan kernel tabanlı işlemlere (erosion, dilation, blur gibi) benzer, ancak CNN'de bu kernel'lerin değerleri sabit değil, eğitim sürecinde veriden öğrenilir.
+
+
+Temel Katmanlar:
+
+Convolutional Layer: Öğrenilebilir filtreler aracılığıyla görüntüden özellik çıkarır (kenarlar, dokular, şekiller gibi)
+
+Activation Function (ReLU vb.): Modelin doğrusal olmayan (non-linear) ilişkileri öğrenebilmesini sağlar
+
+Pooling Layer: Özellik haritalarını küçültüp hesaplama maliyetini azaltır, modelin küçük kaymalara/dönmelere karşı dayanıklılığını artırır
+
+Fully Connected Layer: Çıkarılan özellikleri birleştirip nihai sınıflandırma/tahmin kararını verir
+
+
+Backbone Mimarisi ile İlişkisi:
+
+Backbone, bir CNN tabanlı modelin özellik çıkarma kısmına verilen isimdir.
+Ham görüntüyü alıp anlamlı özellik haritalarına dönüştüren gövde kısmıdır.
+Örneğin nesne tespiti modellerinde (YOLO gibi), backbone kısmı görüntüden özellik çıkarır, ardından "head" adı verilen kısım bu özellikleri kullanarak nihai tahminleri (nesnenin konumu, sınıfı gibi) üretir.
+
+
+Kullanım Alanları:
+
+Görüntü sınıflandırma (bir resmin ne olduğunu tahmin etme)
+
+Nesne tespiti (YOLO, Faster R-CNN gibi)
+
+Segmentasyon (görüntüdeki her pikseli sınıflandırma)
+
+Yüz tanıma sistemleri
